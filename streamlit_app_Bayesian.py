@@ -4,10 +4,8 @@ import numpy as np
 import time
 import os
 import subprocess
-#import matplotlib
 import altair as alt
 import pickle
-#import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 import math
 
@@ -385,16 +383,6 @@ def main():
             )
             
 
-#    params_0 = MAP_params[system][ idf_label_short[idf] ]
-#    params = []
-    
-    # updated params
-#    for i_s, s_name in enumerate(short_names.keys()):
-#        min = design_min[i_s]
-#        max = design_max[i_s]
-#        step = (max - min)/100.
-#        p = st.sidebar.slider(short_names[s_name], min_value=min, max_value=max, value=params_0[i_s], step=step)
- #       params.append(p)
     # Main display tabs
     tab1, tab2 = st.tabs(["Spectra Analysis", "Transport Coefficients"])
     
@@ -419,67 +407,6 @@ def main():
         st.header("Shear and Bulk Viscosities")
         make_viscosity_plots(st.session_state.params)
     
-# This can be change. I don't know if I'm doing it correctly.
-#    Y_sim = load_moment_data('Bayesian_data', idf)
-#    Y_flat = prepare_simulation_data(Y_sim)    
-    
-    # Scaling the data to be zero mean and unit variance for each observables
-#    SS  =  StandardScaler(copy=True)
-    
-    # Singular Value Decomposition
-#    u, s, vh = np.linalg.svd(SS.fit_transform(Y_flat), full_matrices=True) # scaling Y_flat, covariance matrix
-    
-    # whiten and project data to principal component axis (only keeping first 6 PCs)
-#    pc_tf_data=u[:,0:6] * math.sqrt(u.shape[0]-1)
-    
-    # Scale Transformation from PC space to original data space
-#    inverse_tf_matrix= np.diag(s[0:6]) @ vh[0:6,:] * SS.scale_.reshape(1,287)/ math.sqrt(u.shape[0]-1)
-    
-#    scaler = SS 
-        
-    # get emu prediction        
-#    y_pred, cov_pred = predict_observables(params, emu, inverse_tf_matrix, scaler)
-#    Yemu_mean, Yemu_cov, time_emu = emu_predict(emu, params)
-    
-    # Plotting predictions + experimental data
-#    n_cent = len(exp_centrality_labels)
-    
-#    print(y_pred.shape)
-#    n_samples = y_pred.shape[0]
-#    n_cent = len(exp_centrality_labels)  # should be 7
-#    n_xt = 41
-#    predictions_reshaped = y_pred.reshape(n_cent, n_xt)
-#    y = predictions_reshaped
-    
-#    fig, axs = plt.subplots(nrows=2, ncols=4, figsize=(16,8), dpi=1200)
-#    axs = axs.flatten()
-#    for cent in range(n_cent):
-#        ax = axs[cent]
-        
-        # Emulators predictions
-#        ax.fill_between(xt_exp[cent, :], np.percentile(y, 5, axis=0), np.percentile(y, 95, axis=0), color=color_map[idf], alpha=0.4, label="Predictions 90% C.I.")
-#        ax.plot(xt_exp[cent, :], predictions_reshaped[cent, :])
-#        ax.plot(xt_exp[cent, :], y_pred[cent, :])
-#        ax.errorbar(xt_exp[cent, :], u_xt_exp[cent, :], yerr=err_u_xt[cent, :],
-#                    fmt=exp_markers[cent], color='black', capsize=3, label="ALICE PbPb 2.76 TeV")        
-#        ax.set_title(f"Centrality {exp_centrality_labels[cent]}")
-#        ax.set_xlabel(r"$x_T$")
-#        ax.set_ylabel(r"$U(x_T)$")
-#        ax.set_xscale("log")
-#        ax.legend(fontsize=8)
-#    for ax in axs[n_cent:]:
-#        ax.axis('off')
-#    plt.tight_layout()
-#    st.pyplot(fig)
-    
-    # redraw plots    
-#    make_plot_eta_zeta(params)
-            
-#    st.header('Emulators predictions')
-#    st.markdown('Universal Scaled of Particle Spectra')
-#    st.markdown('To update the widget with latest changes, click the button below, and then refresh your webpage')
-#    if st.button('(Update widget)'):
-#        subprocess.run("git pull origin master", shell=True)
     
 if __name__ == "__main__":
     main()     
