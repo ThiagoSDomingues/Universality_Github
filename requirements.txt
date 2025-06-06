@@ -16,7 +16,6 @@ beautifulsoup4==4.11.1
 bleach==5.0.0
 blinker==1.4
 blosc2==2.0.0
-Brlapi==0.8.2
 cachetools==5.3.2
 certifi==2020.6.20
 cffi==1.15.0
