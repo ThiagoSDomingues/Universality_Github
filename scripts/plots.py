@@ -57,6 +57,8 @@ def check_prc_font_compliance(fig):
     else:
         print("✅ PRC font-size compliance check passed.")
 
+check_prc_font_compliance(fig)
+        
 plt.savefig(
     "posterior_Grad_paper_model_to_data.pdf",
     format="pdf",
