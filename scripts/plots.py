@@ -5,42 +5,60 @@ Python Script to generate the paper figures
 import matplotlib.pyplot as plt
 import scienceplots
 
+# Define PRC physical constants
+# =========================
+# PRC / APS FIGURE SETTINGS
+# =========================
 
+MM_TO_PT = 72.0 / 25.4  # exact conversion
 
-plt.style.use([
-    "science",
-    "no-latex",   # or "latex" if you use TeX
-    "journal"
-])
+# APS minimums
+MIN_TEXT_MM = 2.0
+MIN_SUB_MM  = 1.5
 
-# Set figure size in inches, not pixels
-# One-column PRC figure
-fig_width_cm = 8.6
-fig_height_cm = 6.0
+MIN_TEXT_PT = MIN_TEXT_MM * MM_TO_PT     # ≈ 5.7 pt
+MIN_SUB_PT  = MIN_SUB_MM  * MM_TO_PT     # ≈ 4.3 pt
 
-fig = plt.figure(
-    figsize=(fig_width_cm/2.54, fig_height_cm/2.54)
+# PRC column widths
+PRC_ONE_COL_CM = 8.6
+PRC_TWO_COL_CM = 17.8
+
+FIG_WIDTH_CM  = PRC_TWO_COL_CM
+FIG_HEIGHT_CM = 12.0  # safe for PRC
+
+fig, axs = plt.subplots(
+    nrows=2,
+    ncols=2,
+    figsize=(FIG_WIDTH_CM/2.54, FIG_HEIGHT_CM/2.54),
+    sharex='col',
+    gridspec_kw={'height_ratios': [3, 1]}
 )
 
-# convert mm -> pt
-MM_TO_PT = 72 / 25.4  # ≈ 2.835
-MIN_FONT_PT = 2.0 * MM_TO_PT  # ≈ 5.7 pt
-SUB_FONT_PT = 1.5 * MM_TO_PT  # ≈ 4.3 pt
+FONT_MAIN = MIN_TEXT_PT
+FONT_SUB  = MIN_SUB_PT
 
-# Apply global adjustments
-plt.rcParams.update({
-    "font.size": MIN_FONT_PT,
-    "axes.labelsize": MIN_FONT_PT,
-    "axes.titlesize": MIN_FONT_PT,
-    "xtick.labelsize": SUB_FONT_PT,
-    "ytick.labelsize": SUB_FONT_PT,
-    "legend.fontsize": SUB_FONT_PT,
-})
+# Automatic PRC compliance checks: before to save
+def check_prc_font_compliance(fig):
+    """
+    Check that all text objects satisfy APS minimum font sizes.
+    """
+    violations = []
 
-# Python sanity check to ensure that all figures are in the PRC requirements!
-for text in fig.findobj(match=plt.Text):
-    if text.get_fontsize() < MIN_FONT_PT:
-        print("Warning:", text.get_text())
+    for text in fig.findobj(match=plt.Text):
+        size = text.get_fontsize()
+        if size < MIN_SUB_PT:
+            violations.append((text.get_text(), size))
 
-# Save any figure as: 
-#plt.savefig("figure1.pdf", bbox_inches="tight")
+    if violations:
+        print("❌ PRC FONT VIOLATIONS FOUND:")
+        for txt, size in violations:
+            print(f"  '{txt}' -> {size:.2f} pt")
+        raise RuntimeError("Figure does NOT satisfy PRC font requirements.")
+    else:
+        print("✅ PRC font-size compliance check passed.")
+
+plt.savefig(
+    "posterior_Grad_paper_model_to_data.pdf",
+    format="pdf",
+    bbox_inches="tight"
+)
