@@ -1,0 +1,41 @@
+#: table_doi: 10.17182/hepdata.61925.v1/t36
+#: name: Table 36
+#: description: p/pi ratio in Pb-Pb collisions at sqrt(sNN) = 2.76 TeV.
+
+#: data_file: Table_36.yaml
+#: keyword reactions: PB PB --> P X | PB PB --> PBAR X | PB PB --> PI+ X | PB PB --> PI- X
+#: keyword observables: SIG/SIG
+#: keyword phrases: Inclusive | Integrated Cross Section | Cross Section
+#: keyword cmenergies: 2760.0
+#: RE(P + PBAR),,,PB PB --> (P + PBAR) X
+#: RE(PI+ + PI-),,,PB PB --> (PI+ + PI-) X
+#: SQRT(S)/NUCLEON [GeV],,,2760.0
+#: YRAP,,,-0.5-0.5
+CENTRALITY [PCT],CENTRALITY [PCT] LOW,CENTRALITY [PCT] HIGH,DNch/DETARAP (|ETARAP| .LT. 0.5),error +,error -
+2.5,0.0,5.0,1601.0,60.0,-60.0
+7.5,5.0,10.0,1294.0,49.0,-49.0
+15.0,10.0,20.0,966.0,37.0,-37.0
+25.0,20.0,30.0,649.0,23.0,-23.0
+35.0,30.0,40.0,426.0,15.0,-15.0
+45.0,40.0,50.0,261.0,9.0,-9.0
+55.0,50.0,60.0,149.0,6.0,-6.0
+65.0,60.0,70.0,76.0,4.0,-4.0
+75.0,70.0,80.0,35.0,2.0,-2.0
+85.0,80.0,90.0,13.4,1.6,-1.2
+
+#: RE(P + PBAR),,,PB PB --> (P + PBAR) X
+#: RE(PI+ + PI-),,,PB PB --> (PI+ + PI-) X
+#: SQRT(S)/NUCLEON [GeV],,,2760.0
+#: YRAP,,,-0.5-0.5
+CENTRALITY [PCT],CENTRALITY [PCT] LOW,CENTRALITY [PCT] HIGH,SIG(P + PBAR)/SIG(PI+ + PI-),stat +,stat -,sys +,sys -
+2.5,0.0,5.0,0.04559,9e-05,-9e-05,0.00319,-0.00319
+7.5,5.0,10.0,0.04569,0.0001,-0.0001,0.0032,-0.0032
+15.0,10.0,20.0,0.04629,8e-05,-8e-05,0.00324,-0.00324
+25.0,20.0,30.0,0.04722,9e-05,-9e-05,0.00331,-0.00331
+35.0,30.0,40.0,0.04825,0.00011,-0.00011,0.00338,-0.00338
+45.0,40.0,50.0,0.04955,0.00014,-0.00014,0.00347,-0.00347
+55.0,50.0,60.0,0.05111,0.00018,-0.00018,0.00358,-0.00358
+65.0,60.0,70.0,0.0524,0.00022,-0.00022,0.00367,-0.00367
+75.0,70.0,80.0,0.05368,0.00031,-0.00031,0.00376,-0.00376
+85.0,80.0,90.0,0.05436,0.00049,-0.00049,0.00381,-0.00381
+
