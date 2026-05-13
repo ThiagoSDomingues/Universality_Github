@@ -1,0 +1,20 @@
+#: table_doi: 10.17182/hepdata.110161.v1/t58
+#: name: Table 58
+#: description: Integrated yield ratios of phi ($\phi$) to pions ($\pi^{+}+\pi^{-}$) measured in Xe-Xe collisions at $\sqrt{s_{NN}}$ = 5.44 TeV.
+#: data_file: table_58.yaml
+#: keyword observables: DN/DPT
+#: keyword cmenergies: 5440.0
+#: keyword phrases: Inclusive | Differential Distribution | Transverse Momentum Dependence
+#: keyword reactions: XE XE --> CHARGED X | XE XE --> PHI X | XE XE --> PI+ X | XE XE --> PI- X
+#: RE(PHI),XE XE --> PHI X
+#: RE(PI+ + PI-),XE XE --> PI+ X, XE XE --> PI- X
+#: RE,XE XE --> CHARGED X
+#: SQRT(S)/NUCLEON [GeV],5440.0
+#: YRAP,-0.5-0.5
+Cent [ptc.],$(\phi)/(\pi^{+}+\pi^{-})$,stat. +,stat. -,syst. +,syst. -
+0.0-10.0,0.020228,0.00057876,-0.00057876,0.0023656,-0.0023656
+10.0-30.0,0.021318,0.00043247,-0.00043247,0.0027293,-0.0027293
+30.0-50.0,0.019975,0.00056173,-0.00056173,0.0026462,-0.0026462
+50.0-70.0,0.019405,0.00055058,-0.00055058,0.0028181,-0.0028181
+70.0-90.0,0.017375,0.0010174,-0.0010174,0.0025224,-0.0025224
+

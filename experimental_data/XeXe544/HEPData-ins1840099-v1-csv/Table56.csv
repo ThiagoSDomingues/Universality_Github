@@ -1,0 +1,24 @@
+#: table_doi: 10.17182/hepdata.110161.v1/t56
+#: name: Table 56
+#: description: Integrated yield ratios of kaons ($K^{+}+K^{-}$) to pions ($\pi^{+}+\pi^{-}$) measured in Xe-Xe collisions at $\sqrt{s_{NN}}$ = 5.44 TeV.
+#: data_file: table_56.yaml
+#: keyword observables: DN/DPT
+#: keyword cmenergies: 5440.0
+#: keyword phrases: Inclusive | Differential Distribution | Transverse Momentum Dependence
+#: keyword reactions: XE XE --> CHARGED X | XE XE --> K+ X | XE XE --> K- X | XE XE --> PI+ X | XE XE --> PI- X
+#: RE(K+ + K-),XE XE --> K+ X, XE XE --> K- X
+#: RE(PI+ + PI-),XE XE --> PI+ X, XE XE --> PI- X
+#: RE,XE XE --> CHARGED X
+#: SQRT(S)/NUCLEON [GeV],5440.0
+#: YRAP,-0.5-0.5
+Cent [ptc.],$(K^{+}+K^{-})/(\pi^{+}+\pi^{-})$,stat. +,stat. -,syst. +,syst. -
+0.0-5.0,0.14897,0.00026889,-0.00026889,0.016402,-0.016402
+5.0-10.0,0.1528,0.00034475,-0.00034475,0.016086,-0.016086
+10.0-20.0,0.15372,0.0002857,-0.0002857,0.015417,-0.015417
+20.0-30.0,0.155,0.00034438,-0.00034438,0.015461,-0.015461
+30.0-40.0,0.15327,0.00039478,-0.00039478,0.01535,-0.01535
+40.0-50.0,0.15198,0.00050937,-0.00050937,0.015241,-0.015241
+50.0-60.0,0.14635,0.00057504,-0.00057504,0.014809,-0.014809
+60.0-70.0,0.14424,0.00075411,-0.00075411,0.015387,-0.015387
+70.0-90.0,0.13784,0.00086401,-0.00086401,0.015143,-0.015143
+
