@@ -1,0 +1,18 @@
+Universal scaled spectra 
+
+• Universal ratio plot function
+• Model-to-data plot
+
+Catalogy of important codes
+
+Github: Universality_Github
+/scripts/Extract_U_and_save_all_dpts.py
+• Extract and make all the calculations for the spectra and U for hadronic species and all design points over one viscous correction. Save the file as a python pickle file format
+  • Jupyter notebook on QGP computer: calculate_observables_from_Qn.ipynb
+    • tag: Transverse momentum spectra and the scaled spectra   
+
+Github: Universality_Github
+/scripts/plot_spectra_U_all_dpts.py
+• Make plots of all design points overlaid for a specific collision system, viscous correction, etc... from the saved file calculated from the code above
+  • Jupyter notebook on QGP computer: calculate_observables_from_Qn.ipynb
+    • tag: Plotting the $p_T$-spectra and $U(x_T)$.
