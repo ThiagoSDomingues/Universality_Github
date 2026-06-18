@@ -1,5 +1,16 @@
+-------------------------- 
 Universal scaled spectra 
+-------------------------- 
 
+Extending to other hadronic species
+• Extract $U(x_T)$ for pions, kaons, and protons for PbPb 2.76 TeV, XeXe 5.44 TeV  
+   • Validation
+    • Checking the code
+    • Comparing with existing code, verify the kinematic cuts for ALICE PbPb 2.76 TeV
+    • Experimental data: plot only the experimental data and verify them
+    • Simulations: plot only the 500 design points and verify if they right
+  • Plot all design points overlaid with experimental data for pions, kaons, and protons
+  
 • Universal ratio plot function
 • Model-to-data plot
 
